@@ -1,8 +1,9 @@
-module.exports = (function(eleventyConfig) {
+module.exports = (config) => {
+	config.addPassthroughCopy({ 'public': './' })
 	return {
 		dir: {
 			input: 'src',
 			output: '_site'
 		}
 	}
-});
+};
