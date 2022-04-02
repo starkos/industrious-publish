@@ -4,8 +4,9 @@ layout: layouts/base.liquid
 
 {% include 'layouts/header.liquid' %}
 
-<article>
-{{ content }}
+<article class="content-column">
+	<h2>{{ title }}</h2>
+	{{ content }}
 </article>
 
 {% include 'layouts/footer.liquid' %}
