@@ -4,8 +4,9 @@ layout: layouts/base.liquid
 ---
 
 {% include 'layouts/header.liquid' %}
+{% include 'layouts/navigation.liquid' %}
 
-<main class="content-column">
+<main>
 {% for post in collections.posts reversed %}
 	<article>
 		<h3>

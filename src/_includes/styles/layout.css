@@ -1,6 +1,18 @@
-.content-column {
-	background-color: aliceblue;
-	max-width: 52rem;
+header {
+	background-color: lightgray;
+}
+
+header>h1 {
+	max-width: var(--content-width);
 	margin: auto;
-	padding: 1em;
+}
+
+nav {
+	max-width: var(--content-width);
+	margin: auto;
+}
+
+main {
+	max-width: var(--content-width);
+	margin: auto;
 }
