@@ -1,0 +1,43 @@
+header {
+	background-color: lightgray;
+}
+
+header .content {
+	max-width: var(--content-width);
+	height: 8rem;
+	margin: auto;
+}
+
+header img {
+	float: left;
+	bottom: 0;
+
+	/* position: relative;
+	bottom: 0;
+	height: 72px;
+	width: 72px;
+	left: -92px;
+	display: inline-block;
+	margin: 0;
+	padding: 0; */
+}
+
+header h1 {
+	float: left;
+	/* position: relative;
+	bottom: 0;
+	left: -72px;
+	display: inline-block;
+	margin-left: 0;
+	padding-left: 0; */
+}
+
+nav {
+	max-width: var(--content-width);
+	margin: auto;
+}
+
+main {
+	max-width: var(--content-width);
+	margin: auto;
+}
