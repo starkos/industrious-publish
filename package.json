@@ -1,0 +1,23 @@
+{
+  "name": "industrious-publish",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Jess Perkins",
+    "email": "jess@industriousone.com",
+    "url": "https://industriousone.com"
+  },
+  "license": "BSD-3-Clause-Clear",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "html-prettify": "^1.0.7",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-prism": "^2.3.0",
+    "slugify": "^1.6.6"
+  }
+}
