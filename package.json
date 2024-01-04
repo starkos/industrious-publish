@@ -10,7 +10,7 @@
   "license": "BSD-3-Clause-Clear",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "@11ty/eleventy-plugin-bundle": "^1.0.4",
     "html-prettify": "^1.0.7",
     "markdown-it-abbr": "^2.0.0",
     "markdown-it-anchor": "^8.6.7",

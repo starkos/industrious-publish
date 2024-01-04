@@ -1,29 +1,23 @@
+const pluginBundle = require("@11ty/eleventy-plugin-bundle");
+
 module.exports = eleventyConfig => {
-	// Declare the important paths up front so I can pass them to the plugins
-	const paths = {
-		input: 'src',
-		output: 'dist',
-		includes: '_includes'
-	};
-
-	// Enable WebC
-	eleventyConfig.addPlugin(require('./webc.config.js'), paths);
-
-	// Use NJK for preprocessing of static file formats
-	const templateEngines = {
-		markdownTemplateEngine: 'njk',
-		htmlTemplateEngine: 'njk',
-		dataTemplateEngine: 'njk'
-	};
+	// Enable bundling of CSS and JS
+	eleventyConfig.addPlugin(pluginBundle);
 
 	// Add more features to the Markdown processor
 	eleventyConfig.setLibrary('md', require('./markdown.config.js'));
 
-	// Pay it forward; pretty the output of "View Source" in the browser
+	// Pay it forward; prettify the output of "View Source" in the browser
 	eleventyConfig.addPlugin(require('./clean-output.config.js'));
 
 	return {
-		dir: paths,
-		...templateEngines
-	};
+		dir: {
+			input: 'src',
+			output: 'dist',
+			includes: '_includes'
+		},
+		markdownTemplateEngine: 'njk',
+		htmlTemplateEngine: 'njk',
+		dataTemplateEngine: 'njk'
+	}
 };

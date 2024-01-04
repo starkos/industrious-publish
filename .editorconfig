@@ -6,6 +6,6 @@ indent_style = tab
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{css,html,json,md,webc}]
+[*.{css,html,json,md,njk}]
 indent_size = 2
 indent_style = space

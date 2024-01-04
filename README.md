@@ -11,7 +11,6 @@ Rather than a starter site that you clone and edit, this code sits inside your E
 I'm adding things as I need them. This is all for my own use so it's all going to be very opinionated, and they are all going to be my opinions.
 
 - **Starter layouts** at [`./layouts`](./layouts)
-- **WebC support**. [WebC](https://github.com/11ty/webc) is enabled and used for the content layouts.
 - **Extended Markdown syntax**. Abbreviations, anchors, emoji, footnotes, smart typography for starters; see [`./configs/markdown.config.js`](./configs/markdown.config.js).
 - **Clean, human readable generated markup**. I grew up on the early internet learning how it all worked by viewing the source of other people's sites. This is a little effort to pay it forward.
 
@@ -51,7 +50,7 @@ Create a skeleton site.
 
 ```sh
 $ mkdir src src/_data src/_includes
-$ echo '# Page header' > src/index.md
+$ echo '# Welcome to My Site' > src/index.md
 ```
 
 When I'm building my own sites I pull in this base code as a Git submodule located at `src/_includes/base`. That allows me to easily add fixes and features to the base  while building out the downstream sites, and not bother with hosting NPM modules. You could also submodule your own fork of it, or just copy the code to that same location.
@@ -62,7 +61,7 @@ $ git submodule add \
   src/_includes/base
 ```
 
-Finally, copy `base/samples/meta-sample.js` to `src/_data/meta.js` and edit to suit. Then `npm install && npm start` and [`http://localhost:8080/`](http://localhost:8080/) and you're off to the races.
+Finally, copy `base/samples/metadata-sample.js` to `src/_data/metadata.js` and edit to suit. Then `npm install && npm start` and [`http://localhost:8080/`](http://localhost:8080/) and you're off to the races.
 
 ## Examples
 
