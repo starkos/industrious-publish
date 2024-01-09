@@ -1,0 +1,26 @@
+/* Use body color for links */
+:root {
+  color-scheme: light dark;
+}
+
+/* Remove trailing margins from everything; leading margins only */
+* {
+  margin-block-end: 0;
+}
+
+/* Add a little space between consecutive list items */
+ol > li+li, ul > li+li {
+  margin-block-start: var(--size-xxxxs, 0.25em);
+}
+
+/* Reduce space between consecutive paragraphs a little */
+p+p {
+  margin-block-start: var(--size-s);
+}
+
+/* Use the body text color for links */
+
+a:not([class]) {
+  color: currentColor;
+  text-decoration-skip-ink: auto;
+}

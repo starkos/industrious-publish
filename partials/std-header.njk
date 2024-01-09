@@ -1,0 +1,47 @@
+<header>
+  <div class="header__content wrapper">
+    <a href="/">{{ metadata.navigation.home or metadata.siteName }}</a>
+    <nav class="inline-list">
+      {% for item in metadata.navigation.main %}
+        <a href="{{ item.href }}" {% if item.href == page.url %}aria-current="page"{% endif %}>{{ item.text }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+
+{% css %}
+header {
+  margin-block-start: var(--size-m);
+  margin-block-end: var(--size-xl);
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__content a:not(:hover) {
+  text-decoration: none;
+}
+
+.header__content > a {
+  font-weight: bold;
+}
+
+.header__content a[aria-current="page"] {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 2px;
+}
+
+@media (min-width: 26rem) {
+  .header__content {
+    flex-direction: row;
+  }
+
+  .header__content nav {
+    margin-left: auto;
+  }
+}
+{% endcss %}

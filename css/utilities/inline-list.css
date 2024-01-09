@@ -1,0 +1,9 @@
+.inline-list {
+  display: flex;
+  align-items: baseline;
+}
+
+.inline-list *+*:before {
+  content: var(--inline-list-separator, "");
+  margin-inline: var(--size-xxs, 1ch);
+}

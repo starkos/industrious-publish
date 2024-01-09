@@ -4,7 +4,7 @@ const htmlPrettify = require('html-prettify');
 
 module.exports = (eleventyConfig, paths) => {
 	eleventyConfig.addTransform('html-prettify', async function(content, outputPath) {
-		if (outputPath.endsWith('.html')) {
+		if (outputPath && outputPath.endsWith('.html')) {
 			content = htmlPrettify(content)
 				.replace("<title>\n    ", "<title>");
 		}

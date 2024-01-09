@@ -1,6 +1,10 @@
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 
 module.exports = eleventyConfig => {
+	// Enable rendering of markup from templates
+	eleventyConfig.addPlugin(EleventyRenderPlugin);
+
 	// Enable bundling of CSS and JS
 	eleventyConfig.addPlugin(pluginBundle);
 
