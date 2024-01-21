@@ -1,0 +1,22 @@
+{%- set prev = collection | getPreviousCollectionItem %}
+{%- set next = collection | getNextCollectionItem %}
+<ul class="links-nextprev">
+  <li>
+    {%- if prev %}
+      &larr; <a href="{{ prev.url }}">{{ prev.data.title or (prev.date | formatDate) }}</a>
+    {% endif %}
+  </li>
+  <li>
+    {%- if next %}
+      <a href="{{ next.url }}">{{ next.title or (next.date | formatDate) }}</a> &rarr;
+    {% endif %}
+  </li>
+</ul>
+
+{% css %}
+.links-nextprev {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+{% endcss %}
