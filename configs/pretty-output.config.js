@@ -2,7 +2,7 @@
 
 const htmlPrettify = require('html-prettify');
 
-module.exports = (eleventyConfig, paths) => {
+module.exports = (eleventyConfig) => {
 	eleventyConfig.addTransform('html-prettify', async function(content, outputPath) {
 		if (outputPath && outputPath.endsWith('.html')) {
 			content = htmlPrettify(content)
