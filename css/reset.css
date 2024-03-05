@@ -32,8 +32,9 @@ ul[class], ol[class] {
   padding: 0;
 }
 
-img, picture {
+figure, img, picture {
   display: block;
+  margin: 0;
   max-width: 100%;
 }
 

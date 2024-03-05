@@ -12,7 +12,7 @@ module.exports = (eleventyConfig) => {
 		let urlPath = 'img';
 
 		let metadata = await Image(src, {
-			widths: [320, 920, 1920, 'auto'],
+			widths: [320, 920, 1920],
 			formats: ['auto'],
 			urlPath: `/${urlPath}/`,
 			outputDir: path.join(eleventyConfig.dir.output, urlPath)
@@ -20,7 +20,7 @@ module.exports = (eleventyConfig) => {
 
 		let data = metadata.jpeg[metadata.jpeg.length - 1];
 
-		return `<figure class="flow">
+		return `<figure>
 			<picture>
 				${Object
 					.values(metadata)

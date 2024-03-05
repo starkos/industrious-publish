@@ -18,8 +18,13 @@ p+p {
   margin-block-start: var(--size-s);
 }
 
-/* Use the body text color for links */
+/* ...but limit its application */
+blockquote>p {
+  margin-block-start: 0;
+}
 
+
+/* Use the body text color for links */
 a:not([class]) {
   color: currentColor;
   text-decoration-skip-ink: auto;

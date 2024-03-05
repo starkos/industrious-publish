@@ -2,6 +2,5 @@
   box-sizing: content-box;
   margin-inline: auto;
   max-inline-size: var(--measure, 60ch);
-  padding-inline-start: var(--gutter, 1rem);
-  padding-inline-end: var(--gutter, 1rem);
+  padding-inline: var(--gutter, 1rem);
 }
