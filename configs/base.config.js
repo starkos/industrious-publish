@@ -9,7 +9,7 @@ const pluginPretty = require ('./pretty-output.config.js');
 const markdowExtras = require ('./markdown.config.js');
 
 const {
-	formatDate
+	formatDate, sortByTitle
 } = require ('./filters.config.js');
 
 module.exports = (eleventyConfig) => {
@@ -34,6 +34,7 @@ module.exports = (eleventyConfig) => {
 
 	// Register filters
 	eleventyConfig.addFilter ('formatDate', formatDate);
+	eleventyConfig.addFilter ('sortByTitle', sortByTitle);
 
 	return {
 		dir: {
