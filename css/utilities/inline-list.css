@@ -4,6 +4,6 @@
 }
 
 .inline-list *+*:before {
-  content: var(--inline-list-separator, "");
+  content: var(--inline-list-separator, "") / "";
   margin-inline: var(--size-xxs, 1ch);
 }
