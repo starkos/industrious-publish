@@ -2,11 +2,11 @@ const path = require('path');
 
 const { EleventyRenderPlugin } = require ('@11ty/eleventy');
 
-const pluginBundle = require ('@11ty/eleventy-plugin-bundle');
-const pluginImage = require('.//image.config.js');
-const pluginPretty = require ('./pretty-output.config.js');
+const bundlePlugin = require ('@11ty/eleventy-plugin-bundle');
+const imagePlugin = require('.//image.config.js');
+const prettyPlugin = require ('./pretty-output.config.js');
 
-const markdowExtras = require ('./markdown.config.js');
+const markdownLibrary = require ('./markdown.config.js');
 
 const {
 	formatDate, sortByTitle
@@ -21,16 +21,19 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin (EleventyRenderPlugin);
 
 	// Enable bundling of CSS and JS
-	eleventyConfig.addPlugin (pluginBundle);
+	eleventyConfig.addPlugin (bundlePlugin);
 
 	// Add image processing shortcode
-	eleventyConfig.addPlugin (pluginImage);
+	eleventyConfig.addPlugin (imagePlugin);
 
 	// Pay it forward; prettify the output of "View Source" in the browser
-	eleventyConfig.addPlugin (pluginPretty);
+	eleventyConfig.addPlugin (prettyPlugin);
 
 	// Add more features to the Markdown processor
-	eleventyConfig.setLibrary ('md', markdowExtras);
+	eleventyConfig.setLibrary ('md', markdownLibrary);
+
+	// Add an 'md' shortcut to support Markdown formatting of properties
+	eleventyConfig.addShortcode ('md', (content) => markdownLibrary.renderInline(content));
 
 	// Register filters
 	eleventyConfig.addFilter ('formatDate', formatDate);
